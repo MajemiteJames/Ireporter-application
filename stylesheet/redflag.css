@@ -1,0 +1,112 @@
+
+.header-nav{
+    word-spacing: 15px;
+    font-weight: bold;
+    font-family:  Arial, sans-serif;
+    float: right;
+    margin-top: 20px;
+}
+
+.header--nav{
+    font-size: 16px;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 100px;
+}
+
+.first-segment{
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+    padding-top: 40px;
+ 
+}
+  
+  
+.description{
+    width: 40%;
+    padding: 20px;
+    margin-bottom: 20px;
+ 
+}
+  
+.address{
+    width: 40%;
+    padding: 10px;
+}
+  
+.first-segment button{
+    width: 10%;
+    padding: 8px;
+    border-radius: 5px;
+}
+  
+.save{
+    background-color: green;
+}
+  
+.left-segment{
+    float: right;
+    border: 3px solid black;
+    height: 100vh;
+    margin-top: -2%;
+    width: 50%;
+}
+  
+.innerLeftSegment{
+    border: 1px solid black;
+    width: 55%;
+    margin: auto;
+    height: 50%;;
+}
+
+ /* Always set the map height explicitly to define the size of the div
+   * element that contains the map. */
+#map {
+    height: 40%;
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 70px;
+}
+  /* Optional: Makes the sample page fill the window. */
+ html, body {
+    height: 120%;
+    margin: 0;
+    padding: 0;
+}
+
+#floating-panel {
+    position: absolute;
+    left: 10px;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+    margin-top: 5%;
+    margin-left: 130px;
+ }
+
+#floating-panel {
+    position: absolute;
+    width: 300px;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+}
+
+  #latlng {
+    width: 225px;
+  }

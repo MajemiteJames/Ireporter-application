@@ -1,0 +1,55 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet/intervention.css">
+</head>
+<body>
+    <header class=header>
+        <div class="header_elem">
+            <a href="interfacelovers.html"><h1>Intervention</h1></a>
+        </div>
+                <div class="header-nav">      
+                    <nav>
+                         <ul>
+                            <li><a class="header--nav" href="#">Home</a></li> 
+                            <li><a class="header--nav" href="#">Red-flag</a></li>
+                            <li><a class="header--nav" href="#">Profile</a></li>
+                        </ul>
+                    </nav>  
+                 </div>
+    </header>
+    <div class="first-segment">
+        <label for="">Write a description of the incident</label>
+        <input type="text" class="description">
+        <div class="button">
+            <button type="submit" class="save">Save</button>
+            <button type="reset" class="reset">Cancel</button>
+            <button>upload image</button>
+        </div>
+    </div>
+    <div class="left-segment">
+        <div class="innerLeftSegment">
+            <button>edit</button>
+            <button>delete</button>
+            <button>investigated</button>
+            <button>resolved</button>
+            <button>rejected</button>
+        </div>
+    </div>
+    <div id="floating-panel">
+        <input id="latlng" type="text" value="40.714224,-73.961452">
+        <input id="submit" type="button" value="Reverse Geocode">
+    </div>
+    <div id="map"></div>
+    <!-- Replace the value of the key parameter with your own API key. -->
+    <script src="stylesheet/intervention.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHmi029TyHBP3iCo_RFvapNdMnbUL5DTU&callback=initMap">
+    </script>
+</body>
+</html>
+</DOCTYPE>

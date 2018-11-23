@@ -64,3 +64,8 @@ body{
 .form .create-account{
     display: none;
 }
+
+.val_err{
+    color: #FF1F1F;
+    margin-top: -10px;
+}
