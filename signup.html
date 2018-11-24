@@ -1,38 +1,24 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="stylesheet/signup.css">
+    <meta charset="utf-8">
+    <title>Create an Account</title>
+    <meta name="keywords" content="example, JavaScript Form Validation, Sample registration form" />
+    <meta name="description" content="This document is an example of JavaScript Form Validation using a sample registration form. " />
+    <link rel='stylesheet' href='login.css' type='text/css' />
+    <script src="login.js"></script>
 </head>
-<body>
-    <div class="login-page">
-        <div class="form">
-            <form method="POST" onsubmit="validate()" action="" class="create-account" name="vform">
-                
-                <input name="username" type="text" placeholder="username" id="name">
-                <div id="name_error" class="val_err"></div>
-                
-                
-                <input name="email" type="email" placeholder="email-id" id="email">
-                <div id="email_error" class="val_err"></div>
-                
-                
-                <input name="password" type="password" placeholder="password" id="password">
-                
-                
-                <input name="confirm_password" type="password" placeholder="confirm_password" id="confirm_password">
-                <div id="password_error" class="val_err"></div>
-                
-                
-                <button>Create</button>
-                
-                <p class="message">Already Registered? <a href="#">Login</a></p>
-            </form>
-        </div>
-    </div>
-    <script src="stylesheet/signup.js"></script>
+<body onload="document.registration.userid.focus();">
+        <form name='registration' onSubmit="return formValidation();">
+        <ul>
+            <li><input type="text" name="userid" placeholder="username"></li>
+            <li><input type="text" name="email" placeholder="email"></li>
+            <li><input type="password" name="passid" placeholder="password" id="password"></li>
+            <li><input type="text" name="confirmPassword" placeholder="confirm_password" id="confirmPassword"></li>
+            
+            <li><input type="submit" name="submit" value="Submit" id="submit"/></li>
+        </ul>
+        <p class="message">Already Registered? <a href="#">Login</a></p>
+    </form>
 </body>
 </html>
