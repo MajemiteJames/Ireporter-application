@@ -50,7 +50,7 @@ body{
     background: #43A047;
 }
 
-.form .message{
+form .message{
     margin: 15px 0 0;
     color: aliceblue;
     font-size: 12px;
@@ -61,11 +61,6 @@ body{
     text-decoration: none;
 }
 
-.form .create-account{
-    display: none;
-}
-
-.val_err{
-    color: #FF1F1F;
-    margin-top: -10px;
-}
+li {
+    list-style-type: none;
+  }
