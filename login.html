@@ -2,44 +2,22 @@
     <html>
         <head>
             <title>Login and Registration</title>
-            <link rel="stylesheet" href="stylesheet/main.css">
+            <link rel="stylesheet" href="stylesheet/login.css">
         </head>
         <body>
             <div class="login-page">
                 <div class="form">
-                    <form method="POST" onsubmit="return validate()" action="" class="create-account" name="vform">
-                        
-                            <input name="username" type="text" placeholder="username">
-                            <div id="name_error" class="val_err"></div>
-                        
-                        
-                            <input name="email" type="email" placeholder="email-id">
-                            <div id="email_error" class="val_err"></div>
-                        
-                        
-                            <input name="password" type="password" placeholder="password">
-                        
-                        
-                            <input name="confirm_password" type="password" placeholder="confirm_password">
-                            <div id="password_error" class="val_err"></div>
-                        
-                        
-                            <button>Create</button>
-                        
-                        <p class="message">Already Registered? <a href="#">Login</a></p>
-                    </form>
-
-                    <form action="" class="login-form">
-                        <input type="text" placeholder="email-id">
-                        <input type="password" placeholder="password">
+                    <form name='registration' onSubmit="return formValidation();" class="login-form">
+                        <li><input type="text" name="userid" placeholder="username"></li>
+                        <li><input type="password" name="passid" placeholder="password" id="password"></li>
                         <button>Login</button>
                         <p class="message">Not Registered? <a href="#">Register</a></p>
                     </form>
+                
                 </div>
             </div>
-            <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-            <script src="stylesheet/main.js"></script>
+            <script src="stylesheet/login.js"></script>
         </body>
     </html>
 </DOCTYPE>
