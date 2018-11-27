@@ -4,9 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>profile</title>
+    <link rel="stylesheet" href="stylesheet/profile.css">
 </head>
 <body>
-    
+    <header class=header>
+        <div class="header_elem">
+            <a href="#"><h1>iReporter App</h1></a>
+        </div>
+            <div class="header-nav">      
+                <nav>
+                    <ul>
+                         <li><a class="header--nav" href="#">Home</a></li> 
+                        <li><a class="header--nav" href="#">Intervention</a></li>
+                        <li><a class="header--nav" href="#">Red-flag</a></li>
+                    </ul>
+                </nav>  
+            </div>
+    </header>
+    <div class="file">
+        <img src="" height="250" alt="Image preview...">
+        <input type="file" onchange="previewFile()" class="chooseFile"><br>
+    </div>
+    <div class="userActivity">
+        <div class="eachActivity">
+            <a href="">Solved Red-flag</a>
+            <span class="counter"></span>
+        </div>
+        <div class="eachActivity">
+            <a href="">Solved Intervention</a>
+            <span class="counter"></span>
+        </div>
+        <div class="eachActivity">
+            <a href="">Unsolved Red-flag</a>
+            <span class="counter"></span>
+        </div>
+        <div class="eachActivity">
+            <a href="">Unsolved Intervention</a>
+            <span class="counter"></span>
+        </div>
+        <div class="eachActivity">        
+            <a href="">Rejected Red-flag</a>
+            <span class="counter"></span>
+        </div>
+        <div class="eachActivity">
+            <a href="">Rejected Intervention</a>
+            <span class="counter"></span>
+        </div>
+        <div class="eachActivity">
+            <a href="">All Red-flag</a>
+            <span class="counter"></span>
+        </div>
+        <div class="eachActivity">
+            <a href="">All Intervention</a>
+            <span class="counter"></span>
+        </div>
+    </div>
+    <div class="profile">
+        <ul>
+            <label for="">First Name</label>
+            <li><input type="text" placeholder="first Name"></li>
+            <label for="">Last Name</label>
+            <li><input type="text" placeholder="Last Name"></li>
+            <label for="">other Names</label>
+            <li><input type="text" placeholder="other Names"></li>
+            <label for="">Email</label>
+            <li><input type="text" placeholder="Email"></li>
+            <label for="">Phone Number</label>
+            <li><input type="text" placeholder="Phone-number"></li>
+            <label for="">Username</label>
+            <li><input type="text" placeholder="username"></li>
+            <button type="submit" class="submit">Submit</button>
+            <button type="reset" class="update">Update</button>
+        </ul>
+    </div>
 </body>
 </html>

@@ -2,6 +2,7 @@ body{
     height: 100vh;
     background-size: cover;
     background-position: center;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
 }
 
 textarea {
@@ -35,6 +36,10 @@ nav ul li{
     margin-left: 50px;
 }
 
+.file{
+    margin-top: 50px;
+}
+
 .image{
     height: 200px;
 }
@@ -66,7 +71,7 @@ nav ul li{
 .aside{
     width: 50%;
     float: right;
-    margin-top: -35%;
+    margin-top: -45%;
     margin-right: 50px;
 }
 
