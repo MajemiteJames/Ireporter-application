@@ -22,8 +22,9 @@
             </header>
             <div class="container">
                 <div class="file">
-                    <img src="" height="200" alt="Image preview...">
-                    <input type="file" onchange="previewFile()"><br>
+                    <label for="">upload a picture</label>
+                    <img id="uploadPreview" src="" width="250" style="display:none" />
+                    <p><input type="file" id="myfile" name="myfile" size="30" onchange="doTest()"></p>
                 </div>
                 <div class="bio">
                     <p>Add a bio</p>

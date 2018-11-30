@@ -1,55 +1,55 @@
 
-function formValidation()
-{
-    var uid = document.registration.userid;
-    var passid = document.registration.passid;
-    var confirmPassword = document.registration.confirmPassword;
-    var uemail = document.registration.email;
-        
-    
-        if(userid_validation(uid,5,12)){
-        if(passid_validation(passid,7,12)){
-        if(confirmPassword_validation(confirmPassword)){ 
-        if(ValidateEmail(uemail)){
-                } 
-            }
-        
+function formValidation() {
+  const uid = document.registration.userid;
+  const passid = document.registration.passid;
+  const confirmPassword = document.registration.confirmPassword;
+  const uemail = document.registration.email;
+  function useridValidation(uid, mx, my) {
+    const uidLen = uid.value.length;
+    if (uidLen === 0 || uidLen >= my || uidLen < mx) {
+      alert("User Id should not be empty / length be between "+mx+" to "+my);
+      uid.focus();
+      return false;
     }
-}
-        return false;
-}
+    return true;
+  }
 
-        function userid_validation(uid,mx,my){
-            var uid_len = uid.value.length;
-                if (uid_len == 0 || uid_len >= my || uid_len < mx){
-                    alert("User Id should not be empty / length be between "+mx+" to "+my);
-                    uid.focus();
-                    return false;
+  function passidValidation(passid, mx, my) {
+    const passidLen = passid.value.length;
+    if (passidLen === 0 || passidLen >= my || passidLen < mx) {
+      alert("Password should not be empty / length be between "+mx+" to "+my);
+      passid.focus();
+      return false;
+    }
+    return true;
+  }
+
+  
+
+  if (useridValidation(uid, 5, 12)) {
+    if (passidValidation(passid,7,12)){
+    if (confirmPassword_validation(confirmPassword)){ 
+    if(ValidateEmail(uemail)){
+            } 
         }
-                    return true;
+    
+}
+}
+    return false;
 }
 
-        function passid_validation(passid,mx,my){
-            var passid_len = passid.value.length;
-                if (passid_len == 0 ||passid_len >= my || passid_len < mx){
-                    alert("Password should not be empty / length be between "+mx+" to "+my);
-                    passid.focus();
-                    return false;
-        }
-                    return true;
+function ValidateEmail(uemail) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value))
+  {
+    return (true)
+  }
+    alert("You have entered an invalid email address!")
+    return (false)
 }
 
-        function passid_validation(passid,mx,my){
-            var passid_len = passid.value.length;
-                if (passid_len == 0 ||passid_len >= my || passid_len < mx){
-                    alert("Password should not be empty / length be between "+mx+" to "+my);
-                    passid.focus();
-                    return false;
-}
-                    return true;
-}
 
-        function ValidateEmail(uemail){
+    /*    function ValidateEmail(uemail){
             var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
             if(uemail.value.match(mailformat)){
             return true;
