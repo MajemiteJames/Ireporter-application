@@ -7,17 +7,33 @@
     <link rel='stylesheet' href='stylesheet/signup.css' type='text/css' />
     <script src="stylesheet/signup.js"></script>
 </head>
-<body onload="document.registration.userid.focus();">
-        <form name='registration' onSubmit="return formValidation();">
-        <ul>
-            <li><input type="text" name="userid" placeholder="username"></li>
-            <li><input type="text" name="email" placeholder="email"></li>
-            <li><input type="password" name="passid" placeholder="password" id="password"></li>
-            <li><input type="text" name="confirmPassword" placeholder="confirm_password" id="confirmPassword"></li>
-            
-            <li><input type="submit" name="submit" value="Submit" id="submit"/></li>
-        </ul>
-        <p class="message">Already Registered? <a href="login.html">Login</a></p>
-    </form>
+<body>
+    <div id="login-box">
+        <div class="left-box">
+          <h1> Sign Up</h1>
+          <form action="submit.html" method="post" class="simpleForm" onsubmit="return ValidateForm()">
+            <input type="text" id="username" placeholder="User Name">
+            <p class="error"></p>
+            <input type="number" id="phoneNum" placeholder="Phone Number">
+            <p class="error"></p>
+            <input type="password" id="password" placeholder="Password">
+            <p class="error"></p>
+            <input type="password" id="confirm_password" placeholder="Confirm Password">
+            <p class="error"></p>
+            <button type="submit" >Register</button>
+        </form>
+          </div>
+  
+          <div class="right-box">
+            <span class="signinwith">Sign in with<br/>Social Network     </span>
+          
+          <button class="social facebook">Log in with Facebook</button>    
+          <button class="social twitter">Log in with Twitter</button> 
+          <button class="social google">Log in with Google+</button> 
+              
+          
+          </div>
+          <div class="or">OR</div>
+      </div>
 </body>
 </html>

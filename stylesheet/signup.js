@@ -1,62 +1,41 @@
 
-function formValidation() {
-  const uid = document.registration.userid;
-  const passid = document.registration.passid;
-  const confirmPassword = document.registration.confirmPassword;
-  const uemail = document.registration.email;
-  function useridValidation(uid, mx, my) {
-    const uidLen = uid.value.length;
-    if (uidLen === 0 || uidLen >= my || uidLen < mx) {
-      alert("User Id should not be empty / length be between "+mx+" to "+my);
-      uid.focus();
-      return false;
-    }
-    return true;
+function ValidateForm(){
+  var username= document.getElementById("username");
+  var phoneNum= document.getElementById("phoneNum");
+  var password= document.getElementById("password");
+  var confirm_password= document.getElementById("confirm_password");
+  removeMessage();
+  var valid=true;
+  if(username.value.length==0){
+      username.className="wrong-input";
+      username.nextElementSibling.innerHTML="Username can't be blank";
+      valid=false;
   }
-
-  function passidValidation(passid, mx, my) {
-    const passidLen = passid.value.length;
-    if (passidLen === 0 || passidLen >= my || passidLen < mx) {
-      alert("Password should not be empty / length be between "+mx+" to "+my);
-      passid.focus();
-      return false;
-    }
-    return true;
+  if(phoneNum.value.length<10){
+   phoneNum.className="wrong-input";
+   phoneNum.nextElementSibling.innerHTML="Contact number cannot be less than 10";
+   valid=false;
   }
-
+  if(password.value.length<6){
+   password.className="wrong-input";
+   password.nextElementSibling.innerHTML="Password cannot be less than 6";
+   valid=false;
+  }
+  if(password.value!=confirm_password.value){
+   confirm_password.className="wrong-input";
+   confirm_password.nextElementSibling.innerHTML="Password does not match";
+   valid=false;
+  }
+  return valid;
+}
+function removeMessage(){
+  var errorinput=document.querySelectorAll(".wrong-input"); 
+  [].forEach.call(errorinput, function(el){
+      el.classList.remove("wrong-input"); 
+  });
   
-
-  if (useridValidation(uid, 5, 12)) {
-    if (passidValidation(passid,7,12)){
-    if (confirmPassword_validation(confirmPassword)){ 
-    if(ValidateEmail(uemail)){
-            } 
-        }
-    
-}
-}
-    return false;
-}
-
-function ValidateEmail(uemail) 
-{
- if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.emailAddr.value))
-  {
-    return (true)
-  }
-    alert("You have entered an invalid email address!")
-    return (false)
-}
-
-
-    /*    function ValidateEmail(uemail){
-            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            if(uemail.value.match(mailformat)){
-            return true;
-}
-            else{
-            alert("You have entered an invalid email address!");
-            uemail.focus();
-            return false;
-}
+  var errorpara=document.querySelectorAll(".error"); 
+  [].forEach.call(errorpara, function(el){
+      el.innerHTML="";
+   });
 }
