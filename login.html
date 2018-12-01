@@ -4,18 +4,31 @@
             <title>Login and Registration</title>
             <link rel="stylesheet" href="stylesheet/login.css">
         </head>
-        <body>
-            <div class="login-page">
-                <div class="form">
-                    <form name='registration' onSubmit="return formValidation();" class="login-form">
-                        <li><input type="text" name="userid" placeholder="username"></li>
-                        <li><input type="password" name="passid" placeholder="password" id="password"></li>
-                        <button>Login</button>
-                        <p class="message">Not Registered? <a href="signup.html">Register</a></p>
-                    </form>
-                
-                </div>
-            </div>
+        <div id="login-box">
+            <div class="left-box">
+              <h1>Log In</h1>
+              <form action="submit.html" method="post" class="simpleForm" onsubmit="return ValidateForm()">
+                <input type="text" id="username" placeholder="User Name">
+                <p class="error"></p>
+                <input type="password" id="password" placeholder="Password">
+                <p class="error"></p>
+                <input type="password" id="confirm_password" placeholder="Confirm Password">
+                <p class="error"></p>
+                <button type="submit" >Submit</button>
+            </form>
+              </div>
+      
+              <div class="right-box">
+                <span class="signinwith">Log In with<br/>Social Network     </span>
+              
+              <button class="social facebook">Log in with Facebook</button>    
+              <button class="social twitter">Log in with Twitter</button> 
+              <button class="social google">Log in with Google+</button> 
+                  
+              
+              </div>
+              <div class="or">OR</div>
+          </div>
 
             <script src="stylesheet/login.js"></script>
         </body>

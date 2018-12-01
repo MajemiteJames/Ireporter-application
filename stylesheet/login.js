@@ -1,43 +1,34 @@
-function formValidation()
-{
-    var passid = document.registration.passid;
-    var uid = document.registration.userid;
-        
-    
-    if(userid_validation(uid,5,12)){
-    if(passid_validation(passid,7,12)){
-        
-    }
+function ValidateForm() {
+  const username = document.getElementById('username');
+  const phoneNum = document.getElementById('phoneNum');
+  const password = document.getElementById('password');
+  const confirmPassword = document.getElementById('confirm_password');
+  let valid = true;
+  if (username.value.length === 0) {
+    username.className = 'wrong-input';
+    username.nextElementSibling.innerHTML = "Username can't be blank";
+    valid = false;
+  }
+  if (password.value.length < 6) {
+    password.className = 'wrong-input';
+    password.nextElementSibling.innerHTML = 'Password cannot be less than 6';
+    valid = false;
+  }
+  if (password.value !== confirmPassword.value) {
+    confirmPassword.className = 'wrong-input';
+    confirmPassword.nextElementSibling.innerHTML = 'Password does not match';
+    valid = false;
+  }
+  return valid;
 }
-        return false;
-}
-
-function userid_validation(uid,mx,my){
-    var uid_len = uid.value.length;
-        if (uid_len == 0 || uid_len >= my || uid_len < mx){
-            alert("User Id should not be empty / length be between "+mx+" to "+my);
-            uid.focus();
-            return false;
-}
-            return true;
-}
-
-function passid_validation(passid,mx,my){
-    var passid_len = passid.value.length;
-        if (passid_len == 0 ||passid_len >= my || passid_len < mx){
-            alert("Password should not be empty / length be between "+mx+" to "+my);
-            passid.focus();
-            return false;
-}
-            return true;
-}
-
-function passid_validation(passid,mx,my){
-    var passid_len = passid.value.length;
-        if (passid_len == 0 ||passid_len >= my || passid_len < mx){
-            alert("Password should not be empty / length be between "+mx+" to "+my);
-            passid.focus();
-            return false;
-}
-            return true;
-}
+function removeMessage() {
+  const errorinput = document.querySelectorAll('wrong-input'); 
+  [].forEach.call(errorinput, function (el) {
+  el.classList.remove('wrong-input'); 
+ });
+  const errorpara = document.querySelectorAll('.error'); 
+  [].forEach.call(errorpara, function(el){
+  el.innerHTML="";
+  });
+  }  
+removeMessage();
