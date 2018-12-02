@@ -23,8 +23,8 @@
             </div>
     </header>
     <div class="file">
-        <img src="" height="250" alt="Image preview...">
-        <input type="file" onchange="previewFile()" class="chooseFile"><br>
+        <img id="uploadPreview" src="" width="250" style="" />
+        <p><input type="file" id="myfile" name="myfile" size="20" onchange="doTest()"></p>
     </div>
     <div class="userActivity">
         <div class="eachActivity">
@@ -78,5 +78,6 @@
             <button type="reset" class="update">Update</button>
         </ul>
     </div>
+    <script src="stylesheet/profile.js"></script>
 </body>
 </html>
