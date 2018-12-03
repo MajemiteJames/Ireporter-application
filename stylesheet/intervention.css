@@ -23,12 +23,13 @@ nav ul li{
 .first-segment{
     display: flex;
     flex-direction: column;
-    margin-left: 70px;
+    margin-left: 60%;
     padding-top: 40px;
+    margin-top: -60%;
 }
   
 .description{
-    width: 40%;
+    width: 80%;
     padding: 20px;
     margin-bottom: 20px;
 }
@@ -39,7 +40,7 @@ nav ul li{
 }
   
 .first-segment button{
-    width: 10%;
+    width: 20%;
     padding: 8px;
     border-radius: 5px;
 }
@@ -62,6 +63,40 @@ nav ul li{
     margin: auto;
     height: 50%;;
 }
+
+p{
+    width: 45%;
+    float: right;
+    margin-right: 10px;
+}
+
+h3{
+    margin-left: 45px;
+}
+
+h6{
+    width: 40%;
+    margin-left: 45px;
+    font-size: 15px;
+}
+
+.firstImage{
+    width: 40%;
+    margin-left: 45px;
+    margin-top: 50px;
+}
+
+.secondImage{
+    width: 40%;
+    margin-left: 45px;
+    height: 300px;
+}
+
+.divide{
+    border: 1px solid black;
+    width: 100%;
+    margin-top: 15%;
+}
   
   /* Always set the map height explicitly to define the size of the div
    * element that contains the map. */
@@ -69,7 +104,7 @@ nav ul li{
       height: 40%;
       width: 40%;
       margin-top: 5%;
-      margin-left: 70px;
+      margin-left: 55%;
 }
     /* Optional: Makes the sample page fill the window. */
 html, body {
@@ -90,7 +125,7 @@ html, body {
       line-height: 30px;
       padding-left: 10px;
       margin-top: 5%;
-      margin-left: 130px;
+      margin-left: 60%;
 }
     
 #floating-panel {
