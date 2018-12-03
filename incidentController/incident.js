@@ -6,7 +6,7 @@ const RedFlag = {
        * @returns {object} redFlag object */
   create(req, res) {
     if (!req.body.username && !req.body.type && !req.body.location && !req.body.status && !req.body.comment) {
-      return res.status(400).send({ 'message':'All fields are required'});
+      return res.status(400).json({ status: 400, message:'All fields are required'});
     }
     const redFlag = incidentModel.create(req.body);
     return res.status(201).send(redFlag);
@@ -17,7 +17,7 @@ const RedFlag = {
 
   getAll(req, res) {
     const redflags = incidentModel.findAll();
-    return res.status(200).send(redflags);
+    return res.status(200).json({ status: 200, redflags });
   },
   /**
      * * @param {object} req * @param {object} res
