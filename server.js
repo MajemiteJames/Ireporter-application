@@ -1,7 +1,7 @@
 // server.js;
 import express from 'express';
-import Reflection from './controllers/routes';
-import RedFlag from './incidentController/incident';
+import Reflection from './api-endpoints/src/controllers/routes';
+import RedFlag from './api-endpoints/src/controllers/incident';
 
 const app = express();
 app.use(express.json());

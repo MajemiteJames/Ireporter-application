@@ -1,4 +1,4 @@
-import incidentModel from '../incidentModel/incident';
+import incidentModel from '../models/incident';
 
 const RedFlag = {
   /**
