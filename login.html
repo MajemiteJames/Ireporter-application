@@ -1,0 +1,38 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <title>Login and Registration</title>
+            <link rel="stylesheet" href="stylesheet/login.css">
+        </head>
+        <div id="login-box">
+            <div class="left-box">
+              <h1>Log In</h1>
+              <div action="home.html" method="post" class="simpleForm" onsubmit="return ValidateForm()">
+              
+                <input type="text" id="username" placeholder="User Name">
+                <p class="error"></p>
+                <input type="password" id="password" placeholder="Password">
+                <p class="error"></p>
+                <input type="password" id="confirm_password" placeholder="Confirm Password">
+                <p class="error"></p>
+                <a href="home.html"><button>Submit</button></a>
+                    
+            </div>
+              </div>
+      
+              <div class="right-box">
+                <span class="signinwith">Log In with<br/>Social Network     </span>
+              
+              <button class="social facebook">Log in with Facebook</button>    
+              <button class="social twitter">Log in with Twitter</button> 
+              <button class="social google">Log in with Google+</button> 
+                  
+              
+              </div>
+              <div class="or">OR</div>
+          </div>
+
+            <script src="stylesheet/login.js"></script>
+        </body>
+    </html>
+</DOCTYPE>
