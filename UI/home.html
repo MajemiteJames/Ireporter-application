@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet/home.css">
+</head>
+<body>
+    <span class="bckg"></span>
+<header>
+  <h1>Dashboard</h1>
+  <nav>
+    <ul>
+      <li>
+        <a href="" data-title="Overview">Overview</a>
+      </li>
+      <li>
+        <a href="" data-title="Log Out">Log Out</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<div class="main">
+    <textarea id="story" name="story"
+            rows="2" cols="3" placeholder="Write an incident">
+            Write an incident...
+    </textarea>
+    <select class="required">
+        <option value="" disabled selected>Select something...
+        <option value="1">Redflags
+        <option value="2">Interventions
+      </select>
+<div id="floating-panel">
+    <input id="latlng" type="text" value="40.714224,-73.961452">
+    <input id="submit" type="button" value="insert co-ordinates">
+  </div>
+  <div id="map"></div>
+  </div>
+  <div class="overview">
+    <div>
+        <h4>Overview of Activities</h4>
+    </div>
+    <table>
+            <thead>
+              <tr>
+                <th scope="col">Date created</th>
+                <th scope="col">Type of Incident</th>
+                <th scope="col">Description</th>
+                <th scope="col">Location</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <a href=""><td data-label="Date created">12/4/2018</td></a>
+                <td data-label="Type of Incident">Redflags</td>
+                <td data-label="description">saw police man taking bribe</td>
+                <td data-label="Location">3.33283, -282833</td>
+                <td data-label="Status">under investigation</td>
+              </tr>
+              <tr>
+                    <td data-label="Date created">12/4/2018</td>
+                    <td data-label="Type of Incident">Redflags</td>
+                    <td data-label="description">saw police man taking bribe</td>
+                    <td data-label="Location">3.33283, -282833</td>
+                    <td data-label="Status">rejected</td>
+              </tr>
+              <tr>
+                    <td data-label="Date created">12/4/2018</td>
+                    <td data-label="Type of Incident">Intervention</td>
+                    <td data-label="description">bad spot at Yaba</td>
+                    <td data-label="Location">3.33283, -282833</td>
+                    <td data-label="Status">solved,</td>
+              </tr>
+              <tr>
+                    <td data-label="Date created">15/8/2018</td>
+                    <td data-label="Type of Incident">Intervention</td>
+                    <td data-label="description">bad road at Iyana Paja</td>
+                    <td data-label="Location">3.33283, -282833</td>
+                    <td data-label="Status">under investigation</td>
+              </tr>
+            </tbody>
+          </table>
+  </div>
+
+  <!-- Replace the value of the key parameter with your own API key. -->
+  <script src="stylesheet/JS/home.js"></script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHmi029TyHBP3iCo_RFvapNdMnbUL5DTU&callback=initMap">
+  </script>
+</script>
+</body>
+</html>
