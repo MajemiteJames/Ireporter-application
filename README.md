@@ -35,7 +35,7 @@ intervention location.
  
   npm install
 
-  Run npm run dev-start to start the application
+  Run npm run dev-start to start the application.
   
  # API ENDPOINTS
   HTTP VERB	ENDPOINT	FUNCTIONALITY
