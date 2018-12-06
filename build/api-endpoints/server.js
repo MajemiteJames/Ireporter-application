@@ -29,26 +29,22 @@ app.use(_express2.default.json());
 app.get('/', function (req, res) {
   return res.status(200).send({ message: 'YAY! Congratulations! Your first endpoint is working' });
 });
-app.post('/api/v1/reflections', _routes2.default.create);
 app.get('/api/v1/reflections', _routes2.default.getAll);
+app.post('/api/v1/reflections', _routes2.default.create);
 app.get('/api/v1/reflections/:id', _routes2.default.getOne);
 app.put('/api/v1/reflections/:id', _routes2.default.update);
 app.delete('/api/v1/reflections/:id', _routes2.default.delete);
 
-app.post('/api/v1/redFlags', _incident2.default.create);
 app.get('/api/v1/redFlags', _incident2.default.getAll);
 app.get('/api/v1/redFlags/:id', _incident2.default.getOne);
+app.post('/api/v1/redFlags', _incident2.default.create);
 app.put('/api/v1/redFlags/:id', _incident2.default.update);
 app.delete('/api/v1/redFlags/:id', _incident2.default.delete);
 
-app.post('/api/v1/redFlags', _intervention2.default.create);
-app.get('/api/v1/redFlags', _intervention2.default.getAll);
-app.get('/api/v1/redFlags/:id', _intervention2.default.getOne);
-app.put('/api/v1/redFlags/:id', _intervention2.default.update);
-app.delete('/api/v1/redFlags/:id', _intervention2.default.delete);
-
-app.listen(3000, function () {
-  return console.log('We are live on port: 3000');
-});
+app.post('/api/v1/interventions', _intervention2.default.create);
+app.get('/api/v1/interventions', _intervention2.default.getAll);
+app.get('/api/v1/interventions/:id', _intervention2.default.getOne);
+app.put('/api/v1/interventions/:id', _intervention2.default.update);
+app.delete('/api/v1/interventions/:id', _intervention2.default.delete);
 
 exports.default = app;

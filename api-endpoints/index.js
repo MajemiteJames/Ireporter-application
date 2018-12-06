@@ -1,3 +1,3 @@
 import express from 'express';
 
-app.listen(3000, () => console.log('We are live on port: 3000'));
+app.listen(process.env.PORT, () => console.log('We are live on port: 3000'));
