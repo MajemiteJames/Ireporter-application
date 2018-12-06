@@ -17,10 +17,8 @@ class Incident {
     const newIncident = {
       id: uuid.v4(),
       createdDate: moment.now(),
-      username: data.username || '',
       type: data.type || '',
       location: data.location || '',
-      status: data.status || '',
       image: data.image || '',
       comment: data.comment || '',
     };
@@ -48,10 +46,8 @@ class Incident {
   update(id, data) {
     const incident = this.findOne(id);
     const index = this.incidents.indexOf(incident);
-    this.incidents[index].username = data.username || incident.username;
     this.incidents[index].type = data.type || incident.type;
     this.incidents[index].location = data.location || incident.location;
-    this.incidents[index].status = data.status || incident.status;
     this.incidents[index].comment = data.comment || incident.comment;
     this.incidents[index].image = data.image || incident.image;
     this.incidents[index].modifiedDate = moment.now();

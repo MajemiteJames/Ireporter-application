@@ -1,7 +1,8 @@
 // server.js;
 import express from 'express';
-import Reflection from './api-endpoints/src/controllers/routes';
-import RedFlag from './api-endpoints/src/controllers/incident';
+import Reflection from './src/controllers/routes';
+import RedFlag from './src/controllers/incident';
+import Intervention from './src/controllers/intervention';
 
 const app = express();
 app.use(express.json());
@@ -15,13 +16,16 @@ app.get('/api/v1/reflections/:id', Reflection.getOne);
 app.put('/api/v1/reflections/:id', Reflection.update);
 app.delete('/api/v1/reflections/:id', Reflection.delete);
 
-app.post('/api/v1/redFlags', RedFlag.create);
 app.get('/api/v1/redFlags', RedFlag.getAll);
 app.get('/api/v1/redFlags/:id', RedFlag.getOne);
+app.post('/api/v1/redFlags', RedFlag.create);
 app.put('/api/v1/redFlags/:id', RedFlag.update);
 app.delete('/api/v1/redFlags/:id', RedFlag.delete);
 
-const port = 8000;
-app.listen(port, () => {
-  console.log('app running on port ', +port);
-});
+app.post('/api/v1/interventions', Intervention.create);
+app.get('/api/v1/interventions', Intervention.getAll);
+app.get('/api/v1/interventions/:id', Intervention.getOne);
+app.put('/api/v1/interventions/:id', Intervention.update);
+app.delete('/api/v1/interventions/:id', Intervention.delete);
+
+export default app;

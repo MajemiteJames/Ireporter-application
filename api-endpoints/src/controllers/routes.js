@@ -17,7 +17,7 @@ const Reflection = {
 
   getAll(req, res) {
     const reflections = routesModel.findAll();
-    return res.status(200).send(reflections);
+    return res.status(200).send('james');
   },
   /**
      * * @param {object} req * @param {object} res
@@ -55,4 +55,5 @@ const Reflection = {
     return res.status(204).send(ref);
   },
 };
+
 export default Reflection;

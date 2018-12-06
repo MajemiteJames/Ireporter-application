@@ -4,15 +4,17 @@
             <title>Login and Registration</title>
             <link rel="stylesheet" href="stylesheet/login.css">
         </head>
-        <div id="login-box">
+        <div id="login-box" >
             <div class="left-box">
               <h1>Log In</h1>
-              <form action="submit.html" method="post" class="simpleForm" onsubmit="return ValidateForm()">
+              <form action="home.html" method="post" class="simpleForm" onsubmit="return ValidateForm()">
                 <input type="text" id="username" placeholder="User Name">
                 <p class="error"></p>
                 <input type="password" id="password" placeholder="Password">
                 <p class="error"></p>
-                <button type="submit" >Submit</button>
+                <button onclick="location.href='home.html'" type="button">Submit</button>
+                <p>have no account <a href="signup.html">Sign Up</a></p>
+                <p><a href="admin.html">Admin</a></p>
             </form>
               </div>
           </div>

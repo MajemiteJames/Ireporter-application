@@ -12,10 +12,14 @@ var _incident = require('./api-endpoints/src/controllers/incident');
 
 var _incident2 = _interopRequireDefault(_incident);
 
+var _intervention = require('./api-endpoints/src/controllers/intervention');
+
+var _intervention2 = _interopRequireDefault(_intervention);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var app = (0, _express2.default)(); // server.js;
-
+// server.js;
+var app = (0, _express2.default)();
 app.use(_express2.default.json());
 
 app.get('/', function (req, res) {
@@ -33,6 +37,11 @@ app.get('/api/v1/redFlags/:id', _incident2.default.getOne);
 app.put('/api/v1/redFlags/:id', _incident2.default.update);
 app.delete('/api/v1/redFlags/:id', _incident2.default.delete);
 
+app.post('/api/v1/redFlags', _intervention2.default.create);
+app.get('/api/v1/redFlags', _intervention2.default.getAll);
+app.get('/api/v1/redFlags/:id', _intervention2.default.getOne);
+app.put('/api/v1/redFlags/:id', _intervention2.default.update);
+app.delete('/api/v1/redFlags/:id', _intervention2.default.delete);
 var port = 8000;
 app.listen(port, function () {
   console.log('app running on port ', +port);

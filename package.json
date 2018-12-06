@@ -4,9 +4,9 @@
   "description": "��#\u0000 \u0000I\u0000r\u0000e\u0000p\u0000o\u0000r\u0000t\u0000e\u0000r\u0000-\u0000a\u0000p\u0000p\u0000l\u0000i\u0000c\u0000a\u0000t\u0000i\u0000o\u0000n\u0000\r\u0000 \u0000",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require babel-polyfill --require babel-register",
-    "build": "babel server.js --out-dir build",
-    "dev-start": "babel-watch server.js"
+    "test": "mocha --require babel-register --exit",
+    "build": "babel api-endpoints/server.js --out-dir build",
+    "dev-start": "babel-watch api-endpoints/server.js"
   },
   "repository": {
     "type": "git",
@@ -25,9 +25,13 @@
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "babel-watch": "^2.0.7",
+    "chai": "^4.2.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0"
+    "eslint-plugin-import": "^2.14.0",
+    "mocha": "^5.2.0",
+    "sinon": "^7.1.1",
+    "supertest": "^3.3.0"
   },
   "dependencies": {
     "express": "^4.16.4",

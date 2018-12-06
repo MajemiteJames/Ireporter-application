@@ -58,7 +58,7 @@ class Reflection {
     return this.reflections[index];
   }
   /**
-   * * @param {uuid} id */
+   * * @param */
 
   delete(id) {
     const reflection = this.findOne(id);
