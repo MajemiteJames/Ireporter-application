@@ -1,8 +1,6 @@
 function ValidateForm() {
   const username = document.getElementById('username');
-  const phoneNum = document.getElementById('phoneNum');
   const password = document.getElementById('password');
-  const confirmPassword = document.getElementById('confirm_password');
   let valid = true;
   if (username.value.length === 0) {
     username.className = 'wrong-input';

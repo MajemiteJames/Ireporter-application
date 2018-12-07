@@ -33,7 +33,9 @@ app.get('/api/v1/redFlags/:id', _incident2.default.getOne);
 app.put('/api/v1/redFlags/:id', _incident2.default.update);
 app.delete('/api/v1/redFlags/:id', _incident2.default.delete);
 
-var port = 8000;
-app.listen(port, function () {
-  console.log('app running on port ', +port);
+app.listen(process.env.PORT, () => console.log('We are live on port: 3000'));
+
+// var port = 8000;
+// app.listen(port, function () {
+  // console.log('app running on port ', +port);
 });

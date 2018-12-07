@@ -101,39 +101,39 @@ header {
   height:100%;
   float:left;
   position:relative;
-            z-index:99}
+  z-index:99}
   
-   nav ul li {
-    border-bottom:1px solid #42454D;
-    padding-left:48px;
-    padding-right: 20px;
+nav ul li {
+   border-bottom:1px solid #42454D;
+   padding-left:48px;
+   padding-right: 20px;
+   transition:all 0.6s;
+   border-top:1px solid #2E3036;}
+      
+nav ul li:hover {
+   background-color: #454952;
+   transition: all 0.6s;
+   border-bottom: 1px solid #797979;
+}
+      
+nav ul li:hover a {
+    color:#fff;
     transition:all 0.6s;
-    border-top:1px solid #2E3036;}
+}
       
-    nav ul li:hover {
-        background-color: #454952;
-        transition: all 0.6s;
-        border-bottom: 1px solid #797979;
-      }
+nav ul li a {
+    line-height:55px;
+    font-size:18px;
+    position:relative;
+    letter-spacing:1px;
+    transition:all 0.6s;}
       
-      nav ul li:hover a {
-        color:#fff;
-        transition:all 0.6s;
-      }
-      
-      nav ul li a {
-        line-height:55px;
-        font-size:18px;
-        position:relative;
-        letter-spacing:1px;
-        transition:all 0.6s;}
-      
-        nav ul li a before {
-          font-family: 'entypo', sans-serif;
-          font-size:20px;
-          position:absolute;
-          left:-25px;
-        }
+nav ul li a before {
+    font-family: 'entypo', sans-serif;
+    font-size:20px;
+    position:absolute;
+    left:-25px;
+}
 
 .required{
     height: 40px;
@@ -154,74 +154,72 @@ table {
     margin-top: 10%;
   }
   
-  table caption {
+table caption {
     font-size: 1.5em;
     margin: .5em 0 .75em;
-  }
+}
   
-  table tr {
+table tr {
     background-color: #f8f8f8;
     border: 1px solid #ddd;
     padding: .35em;
-  }
+}
   
-  table th,
-  table td {
+table th,
+table td {
     padding: .625em;
     text-align: center;
-  }
+}
   
-  table th {
+table th {
     font-size: .85em;
     letter-spacing: .1em;
     text-transform: uppercase;
-  }
+}
   
-  @media screen and (max-width: 600px) {
-    table {
-      border: 0;
-    }
+@media screen and (max-width: 600px) {
+table {
+  border: 0;
+}
   
-    table caption {
-      font-size: 1.3em;
+table caption {
+   font-size: 1.3em;
     }
     
-    table thead {
-      border: none;
-      clip: rect(0 0 0 0);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px;
-    }
+table thead {
+   border: none;
+   clip: rect(0 0 0 0);
+   height: 1px;
+   margin: -1px;
+   overflow: hidden;
+   padding: 0;
+   position: absolute;
+   width: 1px;
+}
     
-    table tr {
-      border-bottom: 3px solid #ddd;
-      display: block;
-      margin-bottom: .625em;
-    }
+table tr {
+   border-bottom: 3px solid #ddd;
+   display: block;
+   margin-bottom: .625em;
+}
     
-    table td {
-      border-bottom: 1px solid #ddd;
-      display: block;
-      font-size: .8em;
-      text-align: right;
-    }
+table td {
+   border-bottom: 1px solid #ddd;
+   display: block;
+   font-size: .8em;
+   text-align: right;
+}
     
-    table td::before {
+table td::before {
       /*
       * aria-label has no advantage, it won't be read inside a table
       content: attr(aria-label);
       */
-      content: attr(data-label);
-      float: left;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
+   content: attr(data-label);
+   float: left;
+   font-weight: bold;
+   text-transform: uppercase;
+ }
     
-    table td:last-child {
-      border-bottom: 0;
-    }
-  }
+table td:last-child {
+   border-bottom: 0;}
