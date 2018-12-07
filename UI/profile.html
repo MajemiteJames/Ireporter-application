@@ -8,76 +8,125 @@
     <link rel="stylesheet" href="stylesheet/profile.css">
 </head>
 <body>
-    <header class=header>
-        <div class="header_elem">
-            <a href="#"><h1>iReporter App</h1></a>
-        </div>
-            <div class="header-nav">      
-                <nav>
-                    <ul>
-                         <li><a class="header--nav" href="#">Home</a></li> 
-                        <li><a class="header--nav" href="#">Intervention</a></li>
-                        <li><a class="header--nav" href="#">Red-flag</a></li>
-                    </ul>
-                </nav>  
-            </div>
-    </header>
-    <div class="file">
-        <img id="uploadPreview" src="" width="250">
-        <p><input type="file" id="myfile" name="myfile" size="20" onchange="doTest()"></p>
-    </div>
-    <div class="userActivity">
-        <div class="eachActivity">
-            <a href="">Solved Red-flag</a>
-            <span class="counter"></span>
-        </div>
-        <div class="eachActivity">
-            <a href="">Solved Intervention</a>
-            <span class="counter"></span>
-        </div>
-        <div class="eachActivity">
-            <a href="">Unsolved Red-flag</a>
-            <span class="counter"></span>
-        </div>
-        <div class="eachActivity">
-            <a href="">Unsolved Intervention</a>
-            <span class="counter"></span>
-        </div>
-        <div class="eachActivity">        
-            <a href="">Rejected Red-flag</a>
-            <span class="counter"></span>
-        </div>
-        <div class="eachActivity">
-            <a href="">Rejected Intervention</a>
-            <span class="counter"></span>
-        </div>
-        <div class="eachActivity">
-            <a href="">All Red-flag</a>
-            <span class="counter"></span>
-        </div>
-        <div class="eachActivity">
-            <a href="">All Intervention</a>
-            <span class="counter"></span>
-        </div>
-    </div>
-    <div class="profile">
+    <span class="bckg"></span>
+    <header>
+      <h1>Profile</h1>
+      <nav>
         <ul>
-            <label for="">First Name</label>
-            <li><input type="text" placeholder="first Name"></li>
-            <label for="">Last Name</label>
-            <li><input type="text" placeholder="Last Name"></li>
-            <label for="">other Names</label>
-            <li><input type="text" placeholder="other Names"></li>
-            <label for="">Email</label>
-            <li><input type="text" placeholder="Email"></li>
-            <label for="">Phone Number</label>
-            <li><input type="text" placeholder="Phone-number"></li>
-            <label for="">Username</label>
-            <li><input type="text" placeholder="username"></li>
-            <button type="submit" class="submit">Submit</button>
-            <button type="reset" class="update">Update</button>
+              <li>
+                <a href="create.html" data-title="Overview">Create</a>
+              </li>
+              <li>
+                <a href="redflag.html" data-title="Overview">Red-flags</a>
+              </li>
+              <li>
+                <a href="intervention.html" data-title="Overview">Interventions</a>
+              </li>
+              <li>
+                <a href="login.html" data-title="Log Out">Log Out</a>
+              </li>
         </ul>
-    </div>
+      </nav>
+    </header>
+    <table>
+            <thead>
+              <tr>
+                <th scope="col">Incidents</th>
+                <th scope="col">Status</th>
+                <th scope="col">Number of Incidents</th>
+        
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <a href=""><td data-label="Date created">Red-flag</td></a>
+                <td data-label="Type of Incident">resolved</td>
+                <td data-label="Type of Incident">3</td>
+              </tr>
+              <tr>
+                <a href=""><td data-label="Date created">Intervention</td></a>
+                <td data-label="Type of Incident">resolved</td>
+                <td data-label="Type of Incident">4</td>
+              </tr>
+              <tr>
+                <a href=""><td data-label="Date created">Red-flag</td></a>
+                <td data-label="Type of Incident">Draft</td>
+                <td data-label="Type of Incident">3</td>
+              </tr>
+              <tr>
+                <a href=""><td data-label="Date created">Intervention</td></a>
+                <td data-label="Type of Incident">Draft</td>
+                <td data-label="Type of Incident">3</td>
+              </tr>
+               <tr>             
+                <a href=""><td data-label="Date created">Red-flag</td></a>
+                <td data-label="Type of Incident">under investigation</td>
+                <td data-label="Type of Incident">3</td>
+            </tr>  
+            <tr>
+                <a href=""><td data-label="Date created">Intervention</td></a>
+                <td data-label="Type of Incident">under investigation</td>
+                <td data-label="Type of Incident">3</td>
+              </tr>
+              <tr>             
+                <a href=""><td data-label="Date created">Red-flag</td></a>
+                <td data-label="Type of Incident">rejected</td>
+                <td data-label="Type of Incident">3</td>
+            </tr>
+            <tr>
+                <a href=""><td data-label="Date created">Intervention</td></a>
+                <td data-label="Type of Incident">rejected</td>
+                <td data-label="Type of Incident">3</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="overview">
+            <div>
+                <h4>Overview of Activities</h4>
+            </div>
+            <table class="overviewTable">
+                    <thead>
+                      <tr>
+                        <th scope="col">Date created</th>
+                        <th scope="col">Type of Incident</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <a href=""><td data-label="Date created">12/4/2018</td></a>
+                        <td data-label="Type of Incident">Redflags</td>
+                        <td data-label="description" class="incident">saw police man taking bribe</td>
+                        <td data-label="Location">3.33283, -282833</td>
+                        <td data-label="Status">under investigation</td>
+                      </tr>
+                      <tr>
+                            <td data-label="Date created">12/4/2018</td>
+                            <td data-label="Type of Incident">Redflags</td>
+                            <td data-label="description" class="incident">saw police man taking bribe</td>
+                            <td data-label="Location">3.33283, -282833</td>
+                            <td data-label="Status">rejected</td>
+                      </tr>
+                      <tr>
+                            <td data-label="Date created">12/4/2018</td>
+                            <td data-label="Type of Incident">Intervention</td>
+                            <td data-label="description" class="incident">bad spot at Yaba</td>
+                            <td data-label="Location">3.33283, -282833</td>
+                            <td data-label="Status">solved,</td>
+                      </tr>
+                      <tr>
+                            <td data-label="Date created">15/8/2018</td>
+                            <td data-label="Type of Incident">Intervention</td>
+                            <td data-label="description" class="incident">bad road at Iyana Paja</td>
+                            <td data-label="Location">3.33283, -282833</td>
+                            <td data-label="Status">under investigation</td>
+                      </tr>
+                    </tbody>
+                  </table>
+          </div>
+    
     <script src="stylesheet/profile.js"></script>
 </body>
 </html>

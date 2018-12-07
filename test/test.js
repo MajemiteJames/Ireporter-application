@@ -51,9 +51,10 @@ describe('API Tests', () => {
     });
   });
 
-  describe('## Create user ', function() { 
-    it('should create a user', function(done) { 
-      request(app) .post('/api/v1/reflections') .send(reflection) .end(function(err, res) { 
+  describe('## Create user ', () => { 
+    it('should create a user', (done) => { 
+      request(app)
+       .post('/api/v1/reflections') .send(reflection) .end(function(err, res) { 
         expect(res.statusCode).to.equal(200); 
         expect(res.body.name).to.equal('integration test'); 
         // user = res.body; 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheet/create.css">
+</head>
+<body>
+    <span class="bckg"></span>
+<header>
+  <h1>Create an Incident</h1>
+  <nav>
+    <ul>
+      <li>
+        <a href="" data-title="Overview">Overview</a>
+      </li>
+      <li>
+        <a href="" data-title="Overview">Profile</a>
+      </li>
+      <li>
+        <a href="" data-title="Overview">Red-flags</a>
+      </li>
+      <li>
+        <a href="" data-title="Overview">Interventions</a>
+      </li>
+      <li>
+        <a href="" data-title="Log Out">Log Out</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<div class="main">
+    <textarea id="story" name="story"
+            rows="2" cols="3" placeholder="Write an incident">
+            Write an incident...
+    </textarea>
+    <select class="required">
+        <option value="" disabled selected>Select something...
+        <option value="1">Redflags
+        <option value="2">Interventions
+      </select>
+<div id="floating-panel">
+    <input id="latlng" type="text" value="40.714224,-73.961452">
+    <input id="submit" type="button" value="insert co-ordinates">
+  </div>
+  <div id="map"></div>
+  </div>
+
+  <!-- Replace the value of the key parameter with your own API key. -->
+  <script src="stylesheet/JS/home.js"></script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHmi029TyHBP3iCo_RFvapNdMnbUL5DTU&callback=initMap">
+  </script>
+</script>
+</body>
+</html>
